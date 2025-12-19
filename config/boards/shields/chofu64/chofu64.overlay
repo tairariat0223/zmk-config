@@ -7,4 +7,16 @@
         columns = <1>;
         map = <RC(0,0)>;
     };
+
+    physical_layouts {
+        compatible = "zmk,physical-layouts";
+
+        default_layout: layout {
+            compatible = "zmk,physical-layout";
+            label = "Default";
+            keys = <
+                0 0  0 0
+            >;
+        };
+    };
 };
