@@ -5,17 +5,19 @@
         zmk,keymap = &keymap;
         zmk,matrix_transform = &default_transform;
     };
+
+    kscan0: kscan {
+        compatible = "zmk,matrix-gpio";
+        rows = <1>;
+        columns = <1>;
+
+        row-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;
+        col-gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
+    };
 };
 
-&gpio0 { status = "okay"; };
-
-kscan0: kscan {
-    compatible = "zmk,matrix-gpio";
-    rows = <1>;
-    columns = <1>;
-
-    row-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;
-    col-gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
+&gpio0 {
+    status = "okay";
 };
 
 default_transform: matrix_transform {
