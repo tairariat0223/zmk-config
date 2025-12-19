@@ -11,7 +11,7 @@
 &gpio0 { status = "okay"; };
 &gpio1 { status = "okay"; };
 
-matrix: matrix {
+kscan0: kscan {
     compatible = "zmk,matrix-gpio";
     rows = <1>;
     columns = <1>;
@@ -30,7 +30,7 @@ default_transform: matrix_transform {
 physical_layout: physical_layout {
     compatible = "zmk,physical-layout";
     display-name = "chofu64 dummy";
-    kscan = <&matrix>;
+    kscan = <&kscan0>;
 
     keys {
         key_0 {
