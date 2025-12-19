@@ -17,7 +17,9 @@
     };
 };
 
-&gpio0 { status = "okay"; };
+&gpio0 {
+    status = "okay";
+};
 
 default_transform: matrix_transform {
     compatible = "zmk,matrix-transform";
