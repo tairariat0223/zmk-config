@@ -1,5 +1,44 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
 / {
     chosen {
         zmk,keymap = &keymap;
+        zmk,matrix_transform = &default_transform;
+        zmk,physical-layout = &physical_layout;
+    };
+};
+
+&gpio0 { status = "okay"; };
+&gpio1 { status = "okay"; };
+
+matrix: matrix {
+    compatible = "zmk,matrix-gpio";
+    rows = <1>;
+    columns = <1>;
+
+    row-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;
+    col-gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
+};
+
+default_transform: matrix_transform {
+    compatible = "zmk,matrix-transform";
+    rows = <1>;
+    columns = <1>;
+    map = <RC(0,0)>;
+};
+
+physical_layout: physical_layout {
+    compatible = "zmk,physical-layout";
+    display-name = "chofu64 dummy";
+    kscan = <&matrix>;
+
+    keys {
+        key_0 {
+            label = "K0";
+            x = <0>;
+            y = <0>;
+            width = <1>;
+            height = <1>;
+        };
     };
 };
