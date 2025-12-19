@@ -6,7 +6,7 @@
         compatible = "zmk,matrix-transform";
         rows = <1>;
         columns = <1>;
-        map = <&kp_A>;
+        map = <&kp_a>;
     };
 
     physical_layouts {
@@ -18,7 +18,7 @@
             label = "Default";
             transform = <&default_transform>;
             keys = <
-                &kp_A
+                &kp_a
             >;
         };
     };
