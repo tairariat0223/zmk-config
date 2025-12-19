@@ -11,7 +11,7 @@
 &gpio0 { status = "okay"; };
 &gpio1 { status = "okay"; };
 
-kscan0: kscan {
+kscan = <&kscan0>;
     compatible = "zmk,matrix-gpio";
     rows = <1>;
     columns = <1>;
