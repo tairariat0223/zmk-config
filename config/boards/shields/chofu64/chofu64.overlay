@@ -6,7 +6,7 @@
         compatible = "zmk,matrix-transform";
         rows = <1>;
         columns = <1>;
-        map = <KP_A>;
+        map = <4>;
     };
 
     physical_layouts {
@@ -17,7 +17,7 @@
             display-name = "chofu64";
             label = "Default";
             transform = <&default_transform>;
-            keys = <KP_A>;
+            keys = <4>;
         };
     };
 };
