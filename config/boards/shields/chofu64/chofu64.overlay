@@ -13,6 +13,7 @@
 
         default_layout: layout {
             compatible = "zmk,physical-layout";
+            display-name = "chofu64";
             label = "Default";
             keys = <
                 0 0  0 0
