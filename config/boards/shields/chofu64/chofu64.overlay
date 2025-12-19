@@ -6,9 +6,3 @@ default_transform: matrix_transform {
     columns = <1>;
     map = <RC(0,0)>;
 };
-
-/ {
-    chosen {
-        zmk,matrix_transform = &default_transform;
-    };
-};
