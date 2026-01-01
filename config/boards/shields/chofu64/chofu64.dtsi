@@ -1,0 +1,26 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    kscan: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+        diode-direction = "COL2ROW";  // あなたのダイオード方向に合わせる（ROW2COLの場合変更）
+        row-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>  // 実際のrowピン
+                    <&gpio0 11 GPIO_ACTIVE_HIGH>
+                    // ... row数分続ける
+                    ;
+        col-gpios = <&gpio0 12 GPIO_ACTIVE_HIGH>  // 実際のcolピン
+                    <&gpio0 13 GPIO_ACTIVE_HIGH>
+                    // ... col数分続ける
+                    ;
+    };
+
+    matrix_transform: matrix_transform {
+        compatible = "zmk,matrix-transform";
+        rows = <2>;  // あなたのrow数
+        columns = <2>;  // あなたのcol数
+        map = <
+            RC(0,0) RC(0,1) RC(1,0) RC(1,1)...  // 実際の使用位置をRC(r,c)で全部記述（未使用は飛ばしOK）
+        >;
+    };
+};
