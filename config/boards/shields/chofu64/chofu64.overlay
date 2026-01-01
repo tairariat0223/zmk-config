@@ -6,8 +6,7 @@
         compatible = "zmk,matrix-transform";
         rows = <1>;
         columns = <1>;
-        map = &kp A
-        ;
+        map = &kp A;
     };
 
     physical_layouts {
