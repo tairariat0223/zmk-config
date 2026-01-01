@@ -1,6 +1,5 @@
-#include <dt-bindings/zmk/behaviors.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/zmk/physical_layouts.dtsi>
 
 / {
     default_transform: matrix_transform {
@@ -18,7 +17,7 @@
             display-name = "chofu64";
             label = "Default";
             transform = <&default_transform>;
-            keys = < A 0 0 >;
+            keys = < &key_physical_attrs 19050 19050 0 0 0 0 0 >;
         };
     };
 };
