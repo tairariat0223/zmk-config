@@ -1,10 +1,12 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/gpio/gpio.h>
 
 / {
     kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
-        diode-direction = "COL2ROW";  // あなたのダイオード方向に合わせる（ROW2COLの場合変更）
+        diode-direction = "COL2ROW";
+
         row-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>  // 実際のrowピン
                     <&gpio0 11 GPIO_ACTIVE_HIGH>
                     // ... row数分続ける
