@@ -18,7 +18,7 @@
             display-name = "chofu64";
             label = "Default";
             transform = <&default_transform>;
-            keys = < &kp KP_A 0 0 >;
+            keys = < A 0 0 >;
         };
     };
 };
