@@ -1,2 +1,3 @@
+# No whitespace after the comma or in your keyboard name!
 config SHIELD_CHOFU64
-    bool "chofu64"
+    def_bool $(shields_list_contains,chofu64)
