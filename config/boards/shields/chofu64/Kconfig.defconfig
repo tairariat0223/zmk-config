@@ -1,0 +1,9 @@
+if SHIELD_CHOFU64
+
+config ZMK_KEYBOARD_NAME
+    default "chofu64"
+
+config ZMK_SLEEP
+     default y
+
+endif
